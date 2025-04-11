@@ -1,0 +1,66 @@
+main {
+  background-color: var(--body-bg);
+}
+main header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5vw;
+}
+main header h1 {
+  font-family: Dharma;
+}
+main header h1 span {
+  opacity: 0.25;
+}
+main header nav {
+  display: flex;
+  gap: 2rem;
+}
+main header nav span {
+  height: 1.2rem;
+  overflow: hidden;
+}
+main header nav span a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+main header nav span:hover a {
+  transform: translateY(-100%);
+}
+main .banner {
+  padding: 1rem 5vw;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+main .banner .texts h1 {
+  font-family: Dharma;
+  text-transform: uppercase;
+  font-size: 20rem;
+}
+main .banner .texts .tag-line {
+  font-size: 5rem;
+  font-family: Dharma;
+}
+main .banner .texts .sub-heading {
+  opacity: 0.5;
+}
+main section h2 {
+  padding: 1rem 5vw;
+  font-family: Dharma;
+  text-transform: uppercase;
+  font-size: 6rem;
+}
+main .images {
+  width: 90%;
+  margin: auto;
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+main .images img {
+  margin: 0.5rem;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
