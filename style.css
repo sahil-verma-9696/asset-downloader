@@ -10,6 +10,7 @@ main header {
   padding: 1rem 5vw;
   position: sticky;
   top: 0px;
+  background-color: var(--header-bg);
 }
 main header h1 {
   font-family: Dharma;
@@ -31,6 +32,9 @@ main header nav span a {
 }
 main header nav span:hover a {
   transform: translateY(-100%);
+}
+main header .hamburger {
+  display: none;
 }
 main header .toggle-modes {
   display: flex;
@@ -80,16 +84,48 @@ main .images img {
   width: 100%;
 }
 @media (max-width: 726px) {
+  main header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
   main header h1 span {
     display: block;
   }
   main header nav {
     display: none;
+    position: fixed;
+    top: 109px;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: var(--header-bg);
+  }
+  main header nav span {
+    display: block;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 1rem 0;
   }
   main header .toggle-modes {
     position: fixed;
     bottom: 1rem;
     left: 1rem;
+    z-index: 10;
+  }
+  main header .hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 2.3rem;
+  }
+  main header .hamburger img {
+    width: 10vw;
+    filter: var(--png-color);
+  }
+  main header .hamburger .cross {
+    width: 8vw;
   }
   main .banner {
     flex-direction: column;

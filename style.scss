@@ -2,7 +2,7 @@ main {
   background-color: var(--body-bg);
   overflow: auto;
   height: 100vh;
- 
+
   header {
     display: flex;
     justify-content: space-between;
@@ -10,7 +10,8 @@ main {
     padding: 1rem 5vw;
     position: sticky;
     top: 0px;
-    
+    background-color: var(--header-bg);
+
     h1 {
       font-family: Dharma;
       span {
@@ -21,7 +22,6 @@ main {
     nav {
       display: flex;
       gap: 2rem;
-     
 
       span {
         // background-color: red;
@@ -37,6 +37,10 @@ main {
           transform: translateY(-100%);
         }
       }
+    }
+
+    .hamburger {
+      display: none;
     }
 
     .toggle-modes {
@@ -93,41 +97,71 @@ main {
   }
 }
 
-
 @media (max-width: 726px) {
-  main{
-    header{
-      h1{
-        span{
+  main {
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      h1 {
+        span {
           display: block;
         }
       }
-      nav{
+      nav {
         display: none;
+
+        position: fixed;
+        top: 109px;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        background-color: var(--header-bg);
+        span {
+          display: block;
+          text-align: center;
+          text-transform: capitalize;
+          margin: 1rem 0;
+        }
       }
-      .toggle-modes{
+      .toggle-modes {
         position: fixed;
         bottom: 1rem;
         left: 1rem;
+        z-index: 10;
+      }
+      .hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        height: 2.3rem;
+        img {
+          width: 10vw;
+          filter: var(--png-color);
+        }
+        .cross {
+          width: 8vw;
+        }
       }
     }
-    .banner{
+    .banner {
       flex-direction: column;
-      .texts{
-        h1{
+      .texts {
+        h1 {
           font-size: 45vw;
         }
-        .tag-line{
+        .tag-line {
           font-size: 10vw;
         }
       }
-      img{
+      img {
         width: 100%;
         border-radius: 1rem;
       }
     }
 
-    .images{
+    .images {
       column-count: 1;
     }
   }

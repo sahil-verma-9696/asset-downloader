@@ -4,7 +4,9 @@
   --body-bg: #e5e5e5;
   --card-bg: white;
   --active-elem-bg: rgb(71, 71, 71);
+  --header-bg: rgba(255, 255, 255, 0.85);
   --text-color: #322153;
+  --png-color: invert(0%) brightness(200%);
   --border-std: black;
   --primary-color: #34cb79;
   --primary-color-dark: #2fa36c;
@@ -18,8 +20,10 @@
   --body-bg: #121212;
   --card-bg: #1f1f1f;
   --active-elem-bg: gray;
+  --header-bg: rgba(0, 0, 0, 0.85);
   --text-color: #f1f1f1;
   --border-std: white;
+  --png-color: invert(100%) brightness(200%);
   --primary-color: #00c77b;
   --primary-color-dark: #00a86b;
 }
@@ -79,8 +83,10 @@ body {
 
 ::-webkit-scrollbar {
   background-color: transparent;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: gray;
+  background-color: var(--primary-color);
+  width: 1rem;
 }/*# sourceMappingURL=index.css.map */

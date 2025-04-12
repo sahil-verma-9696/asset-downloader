@@ -59,6 +59,25 @@ function toggleModes() {
 }
 toggleModes();
 
+function hamburger() {
+  const ham = document.querySelector(".ham");
+  const cross = document.querySelector(".cross");
+  const nav = document.querySelector("nav");
+
+  ham.addEventListener("click", function () {
+    cross.style.display = "block";
+    ham.style.transform = "translateY(-100%)";
+    cross.style.transform = "translateY(-100%)";
+    nav.style.display = "block";
+  });
+  cross.addEventListener("click", function () {
+    cross.style.display = "block";
+    ham.style.transform = "translateY(00%)";
+    cross.style.transform = "translateY(00%)";
+    nav.style.display = "none";
+  });
+}
+hamburger();
 const imgArr = [
   "https://plus.unsplash.com/premium_photo-1681408249337-61b5752bdb76?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZmVlfGVufDB8fDB8fHww",
   "https://images.unsplash.com/photo-1516342397304-b5da0e4c2dd4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGZlZXxlbnwwfHwwfHx8MA%3D%3D",
@@ -95,10 +114,10 @@ function renderImages() {
 }
 renderImages();
 
-async function fetchImg(){
-  const responce = await fetch("./images")
-  const data = await responce.text()
-  console.log(data)
+async function fetchImg() {
+  const responce = await fetch("./images");
+  const data = await responce.text();
+  console.log(data);
 }
 
-fetchImg()
+fetchImg();
