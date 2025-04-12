@@ -110,7 +110,6 @@ main {
       }
       nav {
         display: none;
-
         position: fixed;
         top: 109px;
         left: 0;
@@ -124,7 +123,10 @@ main {
           margin: 1rem 0;
           a {
             &:hover {
-              transform: none;
+              all: unset;
+            }
+            &:focus{
+              all: unset;
             }
           }
         }

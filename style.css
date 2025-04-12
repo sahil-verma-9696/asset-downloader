@@ -108,7 +108,10 @@ main .images img {
     margin: 1rem 0;
   }
   main header nav span a:hover {
-    transform: none;
+    all: unset;
+  }
+  main header nav span a:focus {
+    all: unset;
   }
   main header .toggle-modes {
     position: fixed;
