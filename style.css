@@ -1,11 +1,15 @@
 main {
   background-color: var(--body-bg);
+  overflow: auto;
+  height: 100vh;
 }
 main header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5vw;
+  position: sticky;
+  top: 0px;
 }
 main header h1 {
   font-family: Dharma;
@@ -27,6 +31,17 @@ main header nav span a {
 }
 main header nav span:hover a {
   transform: translateY(-100%);
+}
+main header .toggle-modes {
+  display: flex;
+  padding: 0.5rem;
+  background-color: rgb(41, 41, 41);
+  border-radius: 1rem;
+  gap: 0.5rem;
+  box-shadow: 0 0 2px white;
+}
+main header .toggle-modes img {
+  width: 1.5rem;
 }
 main .banner {
   padding: 1rem 5vw;
@@ -63,4 +78,34 @@ main .images {
 main .images img {
   margin: 0.5rem;
   width: 100%;
+}
+@media (max-width: 726px) {
+  main header h1 span {
+    display: block;
+  }
+  main header nav {
+    display: none;
+  }
+  main header .toggle-modes {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+  }
+  main .banner {
+    flex-direction: column;
+  }
+  main .banner .texts h1 {
+    font-size: 45vw;
+  }
+  main .banner .texts .tag-line {
+    font-size: 10vw;
+  }
+  main .banner img {
+    width: 100%;
+    border-radius: 1rem;
+  }
+  main .images {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
 }/*# sourceMappingURL=style.css.map */

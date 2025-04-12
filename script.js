@@ -17,13 +17,6 @@ function toggleModes() {
     SYSTEM: "system",
   });
 
-  const zone = document.querySelector(".toggle-modes");
-  zone.innerHTML = `
-    <span id="dark">🌑</span>
-    <span id="light">💡</span>
-    <span id="system">💻</span>
-  `;
-
   const dark = document.querySelector("#dark");
   const light = document.querySelector("#light");
   const system = document.querySelector("#system");
@@ -101,3 +94,11 @@ function renderImages() {
   });
 }
 renderImages();
+
+async function fetchImg(){
+  const responce = await fetch("./images")
+  const data = await responce.text()
+  console.log(data)
+}
+
+fetchImg()
