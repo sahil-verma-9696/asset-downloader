@@ -107,6 +107,9 @@ main .images img {
     text-transform: capitalize;
     margin: 1rem 0;
   }
+  main header nav span a:hover {
+    transform: none;
+  }
   main header .toggle-modes {
     position: fixed;
     bottom: 1rem;
